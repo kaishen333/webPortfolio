@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 
 // This serves static files from the specified directory
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + "/index.html"));
 
-const server = app.listen(3000, () => {
+const server = app.listen(8010, () => {
 
   const host = server.address().address;
   const port = server.address().port;
