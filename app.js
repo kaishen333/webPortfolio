@@ -1,3 +1,4 @@
+/*
 const express = require('express');
 const app = express();
 
@@ -11,3 +12,16 @@ const server = app.listen(3000, () => {
 
   console.log('App listening at http://%s:%s', host, port);
 });
+*/
+
+const express = require('express');
+const app = express();
+
+/*
+app.get("/", function(req, res){
+  res.send("working");
+});
+*/
+
+app.use(express.static(__dirname));
+app.listen(process.env.PORT || 5000);
